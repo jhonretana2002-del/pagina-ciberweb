@@ -2,6 +2,14 @@
 
 Registro de comprobaciones de la adaptación visual y de la publicación en GitHub Pages.
 
+## Ampliación audiovisual por sector
+
+- Las siete escenas de sectores cuentan con un video local y una imagen fija de respaldo; la portada conserva su propio video. Se comprobaron las ocho rutas de video, las ocho imágenes de respaldo y sus ocho controles.
+- Se revisaron en navegador las escenas de clínicas y joyerías en escritorio, y veterinarias y calzado en móvil. Los titulares y botones se leen sobre el degradado.
+- Se comprobó que el video se pausa desde su control y que el concepto de joyerías abre y cierra correctamente.
+- La reproducción automática activa como máximo la escena centrada en pantalla. Las demás quedan pausadas; los videos se cargan al entrar en vista.
+- Los seis videos nuevos figuran como gratuitos para uso comercial bajo la licencia Free de Mixkit; las fuentes se registraron en [Recursos visuales](RECURSOS_VISUALES.md).
+
 ## Comprobaciones realizadas
 
 - Revisión visual de portada, escenas y tarjetas en computadora y móvil.

@@ -31,3 +31,46 @@ dialog{border:0;border-radius:8px;max-width:620px;width:calc(100% - 36px);paddin
 @media(max-width:520px){.chat-panel{width:calc(100% - 24px)}}
 .chat-panel.chat-compact{z-index:1;width:min(390px,calc(100% - 24px));height:calc(var(--chat-visible-height,100dvh) - 28px);max-height:calc(var(--chat-visible-height,100dvh) - 28px);bottom:calc(14px + var(--chat-keyboard-offset,0px));right:12px}.chat-compact .chat-header{padding-block:10px}.chat-compact .chat-intro,.chat-compact .chat-footnote{display:none}.chat-compact .chat-choices{max-height:84px;padding-block:7px}.chat-compact .chat-messages{min-height:55px;padding-block:10px}.chat-compact .chat-form{padding-block:5px}.chat-widget:has(.chat-panel.chat-compact:not([hidden]))>.chat-launcher{visibility:hidden}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* Cada sector presenta un concepto audiovisual con el mismo ritmo de la escena deportiva. */
+.sector-index{display:flex;align-items:center;justify-content:space-between;gap:30px;padding-block:20px 30px;border-top:1px solid #c9cec2}
+.sector-index>span{flex:none;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.16em}
+.sector-index>div{display:flex;align-items:center;gap:7px;overflow-x:auto;scrollbar-width:thin;padding:2px 2px 9px}
+.sector-index a{display:inline-flex;align-items:center;gap:10px;flex:none;border:1px solid #bdc5b7;border-radius:30px;padding:9px 12px;color:#354035;font-size:11px;white-space:nowrap;transition:background .2s,border-color .2s}
+.sector-index a:hover{background:#d8edbc;border-color:#a8bc88}
+.sector-index a span{font-size:15px}
+.sector-story{--story-accent:var(--lime);position:relative;display:flex;align-items:center;height:94svh;min-height:720px;max-height:960px;overflow:hidden;background:#26352b;color:#fff;border-top:2px solid #e9ece3}
+.sector-story .ambient-video{object-position:center;filter:saturate(.86)}
+.sector-story .story-shade{pointer-events:none;background:linear-gradient(90deg,rgba(7,16,12,.86) 0%,rgba(7,16,12,.63) 36%,rgba(7,16,12,.17) 78%,rgba(7,16,12,.08) 100%),linear-gradient(0deg,rgba(7,16,12,.66),transparent 40%,rgba(7,16,12,.17))}
+.sector-story .story-content{z-index:2;padding-block:90px 115px}
+.sector-story .story-content h3{max-width:840px}
+.sector-story .story-content .eyebrow,.sector-story .story-content h3 em{color:var(--story-accent)}
+.sector-story .story-content>p:not(.eyebrow){max-width:410px}
+.sector-story .story-footer{z-index:2}
+.sector-clinicas{--story-accent:#c9f1e9;background:#4b6361}
+.sector-educacion{--story-accent:#ffe2a6;background:#344453}
+.sector-joyerias{--story-accent:#ffe3ae;background:#3c322a}
+.sector-veterinarias{--story-accent:#daf6d0;background:#435742}
+.sector-ropa{--story-accent:#ffd2d9;background:#573a40}
+.sector-calzado{--story-accent:#e1efbd;background:#393c39}
+.sector-ropa .ambient-video{object-position:54% center}
+.sector-veterinarias .ambient-video{object-position:56% center}
+.experiences>.concept-note{padding-block:31px 58px;margin-top:0;max-width:none}
+@media(max-width:800px){
+  .sector-index{display:block;padding-block:20px 24px}
+  .sector-index>span{display:block;margin-bottom:13px}
+  .sector-index>div{margin-right:-22px;padding-right:22px}
+  .sector-story{height:auto;min-height:740px;max-height:none}
+  .sector-story .story-content{padding-block:100px 115px}
+  .sector-story .story-content h3{font-size:clamp(43px,6.4vw,60px);max-width:700px}
+}
+@media(max-width:520px){
+  .sector-index>div{margin-right:-20px;padding-right:20px}
+  .sector-index a{font-size:10px;padding:8px 11px}
+  .sector-story{min-height:700px}
+  .sector-story .story-shade{background:linear-gradient(90deg,rgba(7,16,12,.86),rgba(7,16,12,.37)),linear-gradient(0deg,rgba(7,16,12,.8),transparent 45%,rgba(7,16,12,.2))}
+  .sector-story .story-content{padding-block:95px 125px}
+  .sector-story .story-content h3{font-size:clamp(37px,9.6vw,49px);line-height:1.09}
+  .sector-story .story-content>p:not(.eyebrow){max-width:280px}
+  .sector-story .story-footer>span{max-width:175px}
+}

@@ -89,7 +89,7 @@ function reflectVideo(video) {
   const button = buttonFor(video);
   const playing = !video.paused;
   button.setAttribute('aria-pressed',String(playing));
-  const subject = video.id === 'hero-video' ? 'portada' : 'fútbol infantil';
+  const subject = video.dataset.videoLabel || 'esta sección';
   button.setAttribute('aria-label',(playing ? 'Pausar' : 'Reproducir') + ' video de ' + subject);
   button.querySelector('.play-icon').textContent = playing ? 'Ⅱ' : '▶';
   button.querySelector('.video-label').textContent = playing ? 'Pausar video' : 'Reproducir video';
@@ -98,28 +98,41 @@ function loadVideo(video) {
   if(!video.getAttribute('src')) { video.src = video.dataset.videoSrc; video.load(); }
 }
 async function startVideo(video) {
+  if (!video.paused || video.dataset.starting === 'true') return;
+  video.dataset.starting = 'true';
   loadVideo(video);
   try { await video.play(); } catch { reflectVideo(video); }
+  finally { video.dataset.starting = 'false'; }
+}
+function syncPlayback() {
+  const midpoint = window.innerHeight / 2;
+  const active = videos.filter(video => video.dataset.inView === 'true').sort((a,b) => {
+    const aRect = a.getBoundingClientRect();
+    const bRect = b.getBoundingClientRect();
+    return Math.abs(aRect.top + aRect.height / 2 - midpoint) - Math.abs(bRect.top + bRect.height / 2 - midpoint);
+  })[0];
+  videos.forEach(video => {
+    const allowed = video === active && !document.hidden && video.dataset.userPaused !== 'true' &&
+      ((!reduceMotion.matches && !saveData) || video.dataset.manualPlay === 'true');
+    if (allowed) startVideo(video);
+    else video.pause();
+  });
 }
 videos.forEach(video => {
   video.addEventListener('play',() => reflectVideo(video));
   video.addEventListener('pause',() => reflectVideo(video));
   buttonFor(video).addEventListener('click',() => {
-    if(video.paused) { video.dataset.userPaused = 'false'; startVideo(video); }
-    else { video.dataset.userPaused = 'true'; video.pause(); }
+    if(video.paused) { video.dataset.userPaused = 'false'; video.dataset.manualPlay = 'true'; videos.filter(other => other !== video).forEach(other => other.pause()); startVideo(video); }
+    else { video.dataset.userPaused = 'true'; video.dataset.manualPlay = 'false'; video.pause(); }
   });
 });
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(({target:video,isIntersecting}) => {
-    video.dataset.inView = String(isIntersecting);
-    if(isIntersecting && !document.hidden && !reduceMotion.matches && !saveData && video.dataset.userPaused !== 'true') startVideo(video);
-    else video.pause();
+  entries.forEach(({target:video,intersectionRatio}) => {
+    video.dataset.inView = String(intersectionRatio >= .12);
   });
-},{threshold:.12});
+  syncPlayback();
+},{threshold:[.12,.5]});
 videos.forEach(video => observer.observe(video));
-document.addEventListener('visibilitychange',() => videos.forEach(video => {
-  if(document.hidden) video.pause();
-  else if(video.dataset.inView === 'true' && video.dataset.userPaused !== 'true' && !reduceMotion.matches && !saveData) startVideo(video);
-}));
-reduceMotion.addEventListener('change',event => { if(event.matches) videos.forEach(video => video.pause()); });
+document.addEventListener('visibilitychange',syncPlayback);
+reduceMotion.addEventListener('change',syncPlayback);
 document.querySelector('#year').textContent = new Date().getFullYear();

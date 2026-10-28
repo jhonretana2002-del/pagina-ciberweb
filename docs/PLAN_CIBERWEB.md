@@ -59,7 +59,7 @@ Estas escenas son conceptos de lo que se puede crear. No se presentan como traba
 
 1. **Apertura:** video, identidad Ciberweb, mensaje principal y acceso a las experiencias.
 2. **Visión:** explicar que cada tipo de negocio necesita transmitir algo propio.
-3. **Experiencias:** fútbol infantil, clínicas y educación como escenas amplias; joyería, veterinaria, ropa y calzado como conceptos explorables.
+3. **Experiencias:** siete escenas amplias con video representativo, texto superpuesto, acceso al concepto y control de pausa. Un índice permite saltar a cada sector.
 4. **Servicios:** diseño a medida, contenido, facilidad de uso y claridad del siguiente paso.
 5. **Proceso:** escuchar, crear y afinar con el cliente.
 6. **Contacto:** invitación final con los botones de WhatsApp y correo preparados.
@@ -68,7 +68,7 @@ Estas escenas son conceptos de lo que se puede crear. No se presentan como traba
 
 Mantener la escena visible y con color. Colocar un degradado oscuro más intenso detrás del texto y más suave sobre el resto de la imagen, ajustado a cada encuadre. Revisar la legibilidad también durante los fotogramas más claros.
 
-El video debe reproducirse sin sonido, tener un botón para pausarlo y conservar una imagen fija cuando no pueda reproducirse. Con movimiento reducido o ahorro de datos, la reproducción comienza solamente si la persona la solicita. Pausar las escenas fuera de pantalla.
+Cada video debe reproducirse sin sonido, tener un botón para pausarlo y conservar una imagen fija cuando no pueda reproducirse. Con movimiento reducido o ahorro de datos, la reproducción comienza solamente si la persona la solicita. Pausar las escenas fuera de pantalla.
 
 El movimiento acompaña el contenido. Usar cambios suaves en imágenes y botones, sin bloquear el desplazamiento ni exigir animaciones para entender el mensaje.
 
