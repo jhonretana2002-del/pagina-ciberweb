@@ -1,151 +1,125 @@
 'use strict';
-
-const menuToggle = document.querySelector('.menu-toggle');
+const toggle = document.querySelector('.menu-toggle');
 const mobileNav = document.querySelector('#mobile-nav');
-const helpToggle = document.querySelector('.help-toggle');
-const helpPanel = document.querySelector('#help-panel');
-const helpClose = document.querySelector('.help-close');
-
-function setMenu(open) {
+function closeMenu() { toggle.setAttribute('aria-expanded','false'); mobileNav.hidden = true; }
+toggle.addEventListener('click', () => {
+  const open = toggle.getAttribute('aria-expanded') !== 'true';
+  toggle.setAttribute('aria-expanded',String(open));
   mobileNav.hidden = !open;
-  menuToggle.setAttribute('aria-expanded', String(open));
-  menuToggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
-}
-
-menuToggle.addEventListener('click', () => setMenu(mobileNav.hidden));
-mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
-const desktopMedia = window.matchMedia('(min-width: 761px)');
-desktopMedia.addEventListener('change', event => {
-  if (event.matches) setMenu(false);
 });
-
-function setHelp(open) {
-  helpPanel.hidden = !open;
-  helpToggle.setAttribute('aria-expanded', String(open));
-  helpToggle.setAttribute('aria-label', open ? 'Cerrar ayuda de OdontoSalud' : 'Abrir ayuda de OdontoSalud');
-  if (open) helpClose.focus();
-  else helpToggle.focus();
-}
-
-helpToggle.addEventListener('click', () => setHelp(helpPanel.hidden));
-helpClose.addEventListener('click', () => setHelp(false));
-document.addEventListener('keydown', event => {
-  if (event.key !== 'Escape') return;
-  if (!helpPanel.hidden) setHelp(false);
-  if (!mobileNav.hidden) {
-    setMenu(false);
-    menuToggle.focus();
-  }
+mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click',closeMenu));
+document.addEventListener('keydown',event => {
+  if (event.key === 'Escape' && !mobileNav.hidden) { closeMenu(); toggle.focus(); }
 });
+window.matchMedia('(min-width: 801px)').addEventListener('change',event => { if(event.matches) closeMenu(); });
 
-const topics = {
-  cita: {
-    answer: 'Escribe al WhatsApp 8844-5279 para consultar disponibilidad. El equipo confirma personalmente la fecha y la hora de tu cita.',
-    message: 'Hola, quisiera consultar disponibilidad para una cita en OdontoSalud.',
-    label: 'Consultar una cita'
+const concepts = {
+  deportes: {
+    label:'DEPORTES / PASIÓN Y SUPERACIÓN',
+    title:'Un lugar para las futuras estrellas.',
+    description:'Una web que transmita la energía de tu equipo y la emoción de ser parte. Que las familias imaginen el próximo entrenamiento y los jugadores encuentren su comunidad.',
+    features:['Video de entrenamientos y momentos compartidos.','Presentación de la academia, categorías y cuerpo técnico.','Horarios, encuentros y un camino claro para consultar por inscripciones.']
   },
-  estudio: {
-    answer: 'Consulta con la clínica los estudios radiológicos disponibles y sus requisitos antes de tu visita. El equipo te orientará sobre cómo coordinar tu atención.',
-    message: 'Hola, quisiera consultar los estudios radiológicos disponibles y sus requisitos.',
-    label: 'Consultar radiología'
+  clinicas: {
+    label:'CLÍNICAS / CONFIANZA Y TRANQUILIDAD',
+    title:'Que el cuidado se sienta desde aquí.',
+    description:'Una experiencia serena para conocer a tu equipo, entender tus servicios y dar el siguiente paso con confianza.',
+    features:['Fotografías cercanas del equipo y los espacios.','Servicios y especialidades explicados con claridad.','Ubicación, horarios y acceso a los canales para consultar por una cita.']
   },
-  horario: {
-    answer: 'Horario: lunes a viernes, de 8 a. m. a 6 p. m.; sábados, de 8 a. m. a 1 p. m. Consulta disponibilidad para tu cita antes de visitarnos.',
-    message: 'Hola, quisiera confirmar el horario y la disponibilidad para una cita en OdontoSalud.',
-    label: 'Confirmar disponibilidad'
+  educacion: {
+    label:'CENTROS EDUCATIVOS / CURIOSIDAD Y PERTENENCIA',
+    title:'Un primer vistazo a su futuro.',
+    description:'Una página que acerque a las familias a tu comunidad y refleje cómo se aprende, se juega y se crece en tu institución.',
+    features:['Vida estudiantil y espacios para aprender y compartir.','Propuesta educativa y etapas de formación.','Información de admisiones y una invitación a conocer el centro.']
   },
-  ubicacion: {
-    answer: 'Solicita la ubicación exacta por WhatsApp antes de salir. El equipo de OdontoSalud te compartirá las indicaciones para llegar.',
-    message: 'Hola, ¿podrían compartirme la ubicación de OdontoSalud?',
-    label: 'Solicitar ubicación'
+  joyerias: {
+    label:'JOYERÍAS / RECUERDOS Y SIGNIFICADO',
+    title:'Piezas que dicen algo de ti.',
+    description:'Una vitrina digital donde el detalle, los materiales y la historia de cada colección tengan espacio para brillar.',
+    features:['Fotografía de producto con encuadres cuidados.','Colecciones, materiales y detalles de cada pieza.','Una invitación a consultar por ese regalo o momento especial.']
+  },
+  veterinarias: {
+    label:'VETERINARIAS / CARIÑO Y CONFIANZA',
+    title:'Cuidar a quienes hacen hogar.',
+    description:'Una página cálida que refleje el vínculo con cada mascota y permita conocer el cuidado que ofrece tu equipo.',
+    features:['Escenas de atención cercana y trato amable.','Equipo, servicios y cuidados explicados de forma sencilla.','Horarios, ubicación y canales para consultar por una visita.']
+  },
+  ropa: {
+    label:'ROPA / IDENTIDAD Y EXPRESIÓN',
+    title:'Una marca que se lleva puesta.',
+    description:'Una experiencia editorial que muestre cómo se siente tu colección y la forma de expresarse de quienes la eligen.',
+    features:['Fotografía de prendas en uso y detalles de cada colección.','Categorías, tallas y guías para encontrar el estilo propio.','Un recorrido claro hacia la consulta por productos disponibles.']
+  },
+  calzado: {
+    label:'CALZADO / MOVIMIENTO Y LIBERTAD',
+    title:'Una historia en cada paso.',
+    description:'Un escaparate que conecte cada modelo con la vida real: moverse, entrenar, trabajar o salir a descubrir.',
+    features:['Primeros planos de materiales y calzado en movimiento.','Modelos, tallas y detalles relevantes para elegir.','Acceso sencillo a la consulta por disponibilidad y asesoría.']
   }
 };
-
-const answer = document.querySelector('#help-answer-text');
-const contact = document.querySelector('#help-contact');
-const topicButtons = document.querySelectorAll('[data-topic]');
-topicButtons.forEach(button => button.addEventListener('click', () => {
-  const topic = topics[button.dataset.topic];
-  topicButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-  answer.textContent = topic.answer;
-  contact.href = 'https://wa.me/50688445279?text=' + encodeURIComponent(topic.message);
-  contact.firstChild.textContent = topic.label + ' ';
+const conceptDialog = document.querySelector('#concept-dialog');
+document.querySelectorAll('.concept-open').forEach(button => button.addEventListener('click',() => {
+  const concept = concepts[button.dataset.concept];
+  document.querySelector('#concept-label').textContent = concept.label;
+  document.querySelector('#concept-title').textContent = concept.title;
+  document.querySelector('#concept-description').textContent = concept.description;
+  document.querySelector('#concept-features').replaceChildren(...concept.features.map(text => {
+    const item = document.createElement('li'); item.textContent = text; return item;
+  }));
+  conceptDialog.showModal();
 }));
-
-function initCareCarousel() {
-  const section = document.querySelector('.care-carousel');
-  if (!section || typeof EmblaCarousel !== 'function' || typeof EmblaCarouselAutoScroll !== 'function') return;
-
-  const viewport = section.querySelector('.care-viewport');
-  const slides = [...section.querySelectorAll('.care-slide')];
-  const controls = section.querySelector('.care-controls');
-  const pauseButton = section.querySelector('.care-pause');
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const autoScroll = EmblaCarouselAutoScroll({
-    speed: 0.65,
-    startDelay: 1200,
-    direction: 'forward',
-    playOnInit: false,
-    stopOnInteraction: false,
-    stopOnMouseEnter: true,
-    stopOnFocusIn: true
+document.querySelector('#concept-contact').addEventListener('click',() => conceptDialog.close());
+document.querySelectorAll('.contact-pending').forEach(button => button.addEventListener('click',() => document.querySelector('#contact-dialog').showModal()));
+document.querySelector('#credits-open').addEventListener('click',() => document.querySelector('#credits-dialog').showModal());
+document.querySelectorAll('dialog').forEach(dialog => {
+  dialog.querySelectorAll('.dialog-close,.dialog-close-text').forEach(button => button.addEventListener('click',() => dialog.close()));
+  dialog.addEventListener('click',event => {
+    const bounds = dialog.getBoundingClientRect();
+    if(event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
   });
-  const carousel = EmblaCarousel(viewport, { loop: true, align: 'start', dragFree: true }, [autoScroll]);
-  const motion = carousel.plugins().autoScroll;
-  let manuallyPaused = false;
+});
 
-  const activateSlide = activeSlide => {
-    slides.forEach(slide => slide.classList.toggle('is-selected', slide === activeSlide));
-  };
-
-  slides.forEach(slide => {
-    slide.tabIndex = 0;
-    slide.addEventListener('pointerenter', event => {
-      if (event.pointerType === 'touch') return;
-      activateSlide(null);
-      if (slides.includes(document.activeElement)) document.activeElement.blur();
-    });
-    slide.addEventListener('pointerup', event => {
-      if (event.pointerType === 'touch') activateSlide(slide);
-    });
-  });
-  document.addEventListener('pointermove', event => {
-    if (event.pointerType === 'touch' || event.target.closest?.('.care-slide')) return;
-    activateSlide(null);
-    if (slides.includes(document.activeElement)) document.activeElement.blur();
-  });
-
-  controls.hidden = false;
-  const moveWithControl = move => {
-    const resumeAfterMove = !manuallyPaused && !reducedMotion.matches && !document.hidden;
-    motion.stop();
-    window.requestAnimationFrame(() => {
-      move();
-      if (resumeAfterMove) motion.play(1400);
-    });
-  };
-  section.querySelector('.care-prev').addEventListener('click', () => moveWithControl(() => carousel.scrollPrev()));
-  section.querySelector('.care-next').addEventListener('click', () => moveWithControl(() => carousel.scrollNext()));
-
-  const syncMotion = () => {
-    pauseButton.hidden = reducedMotion.matches;
-    if (manuallyPaused || reducedMotion.matches || document.hidden) motion.stop();
-    else motion.play();
-    pauseButton.setAttribute('aria-pressed', String(manuallyPaused));
-    pauseButton.setAttribute('aria-label', (manuallyPaused ? 'Reanudar' : 'Pausar') + ' recorrido de las instalaciones');
-    pauseButton.innerHTML = manuallyPaused ? 'REANUDAR <span aria-hidden="true">▶</span>' : 'PAUSAR <span aria-hidden="true">Ⅱ</span>';
-  };
-
-  pauseButton.addEventListener('click', () => {
-    manuallyPaused = !manuallyPaused;
-    syncMotion();
-  });
-  carousel.on('autoScroll:play', () => {
-    if (manuallyPaused || reducedMotion.matches || document.hidden) motion.stop();
-  });
-  document.addEventListener('visibilitychange', syncMotion);
-  reducedMotion.addEventListener('change', syncMotion);
-  syncMotion();
+// Posters remain available when autoplay is blocked or reduced motion/data
+// saving is enabled. Load and play only when a video is actually in view.
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const saveData = navigator.connection?.saveData;
+const videos = [...document.querySelectorAll('.ambient-video')];
+function buttonFor(video) { return document.querySelector('[data-video-target="' + video.id + '"]'); }
+function reflectVideo(video) {
+  const button = buttonFor(video);
+  const playing = !video.paused;
+  button.setAttribute('aria-pressed',String(playing));
+  const subject = video.id === 'hero-video' ? 'portada' : 'fútbol infantil';
+  button.setAttribute('aria-label',(playing ? 'Pausar' : 'Reproducir') + ' video de ' + subject);
+  button.querySelector('.play-icon').textContent = playing ? 'Ⅱ' : '▶';
+  button.querySelector('.video-label').textContent = playing ? 'Pausar video' : 'Reproducir video';
 }
-
-initCareCarousel();
+function loadVideo(video) {
+  if(!video.getAttribute('src')) { video.src = video.dataset.videoSrc; video.load(); }
+}
+async function startVideo(video) {
+  loadVideo(video);
+  try { await video.play(); } catch { reflectVideo(video); }
+}
+videos.forEach(video => {
+  video.addEventListener('play',() => reflectVideo(video));
+  video.addEventListener('pause',() => reflectVideo(video));
+  buttonFor(video).addEventListener('click',() => {
+    if(video.paused) { video.dataset.userPaused = 'false'; startVideo(video); }
+    else { video.dataset.userPaused = 'true'; video.pause(); }
+  });
+});
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(({target:video,isIntersecting}) => {
+    video.dataset.inView = String(isIntersecting);
+    if(isIntersecting && !document.hidden && !reduceMotion.matches && !saveData && video.dataset.userPaused !== 'true') startVideo(video);
+    else video.pause();
+  });
+},{threshold:.12});
+videos.forEach(video => observer.observe(video));
+document.addEventListener('visibilitychange',() => videos.forEach(video => {
+  if(document.hidden) video.pause();
+  else if(video.dataset.inView === 'true' && video.dataset.userPaused !== 'true' && !reduceMotion.matches && !saveData) startVideo(video);
+}));
+reduceMotion.addEventListener('change',event => { if(event.matches) videos.forEach(video => video.pause()); });
+document.querySelector('#year').textContent = new Date().getFullYear();
