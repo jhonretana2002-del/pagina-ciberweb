@@ -6,7 +6,7 @@ Los recursos son escenas ilustrativas para presentar posibilidades de diseño. L
 
 | Uso | Archivo | Autor | Fuente |
 | --- | --- | --- | --- |
-| Portada y deportes | football.mp4 y football-poster.webp | Kampus Production | [Children Having Fun Playing Soccer](https://www.pexels.com/video/children-having-fun-playing-soccer-8940723/) |
+| Deportes y fragmento de portada | football.mp4 y football-poster.webp | Kampus Production | [Children Having Fun Playing Soccer](https://www.pexels.com/video/children-having-fun-playing-soccer-8940723/) |
 | Clínicas | clinics.webp | CDC | [Woman Having a Check up](https://www.pexels.com/photo/woman-having-a-check-up-3992806/) |
 | Centros educativos | education.webp | Pavel Danilyuk | [Teachers with Their Pupils in a Classroom](https://www.pexels.com/photo/teachers-with-their-pupils-in-a-classroom-8422126/) |
 | Joyerías | jewelry.webp | Jana Kukebal | [Elegant Gold and Diamond Ring Close Up](https://www.pexels.com/photo/elegant-gold-and-diamond-ring-close-up-30541174/) |
@@ -20,7 +20,9 @@ Los archivos publicados están en la carpeta assets/ciberweb.
 
 Las páginas de origen identifican los recursos como gratuitos. Se consultó la [licencia de Pexels](https://www.pexels.com/license/), que permite su uso y modificación en sitios web y establece restricciones como no sugerir el respaldo de las personas o marcas retratadas.
 
-El video se recortó a 14 segundos, sin audio, a 1280 píxeles de ancho y 24 fotogramas por segundo. Se comprimió en MP4 para la vista previa y pesa aproximadamente 3.94 MB. Las imágenes se optimizaron en WebP.
+El video deportivo se recortó a 14 segundos, sin audio, a 1280 píxeles de ancho y 24 fotogramas por segundo. Se comprimió en MP4 para la vista previa y pesa aproximadamente 3.94 MB. Las imágenes se optimizaron en WebP.
+
+La apertura utiliza un montaje propio de los siete recursos de esta tabla, con transiciones suaves entre sectores. Se publica como intro.mp4, sin audio, a 1280 × 720 píxeles y 24 fotogramas por segundo; pesa aproximadamente 1.64 MB. La imagen de respaldo hero-poster.webp deriva de la fotografía de clínicas. El montaje no añade afirmaciones de relación comercial con las personas retratadas.
 
 No se incorporan a la publicación los originales de alta resolución ni recursos de gastronomía y turismo evaluados antes de definir los siete sectores.
 

@@ -82,8 +82,8 @@ El movimiento acompaña el contenido. Usar cambios suaves en imágenes y botones
 - [x] Probar los siete conceptos, su cierre, la navegación y los botones de contacto.
 - [x] Comprobar pausa y reanudación de video y cierre con teclado; revisar el tratamiento de movimiento reducido en el código.
 - [x] Confirmar que el sitio y sus metadatos ya no presenten la identidad de OdontoSalud.
-- [ ] Subir el sitio, este documento y los créditos al repositorio de GitHub.
-- [ ] Confirmar que GitHub Pages publique la nueva versión y revisar el enlace público.
+- [x] Subir el sitio, este documento y los créditos al repositorio de GitHub.
+- [x] Confirmar que GitHub Pages publique la nueva versión y revisar el enlace público.
 - [ ] Recoger las observaciones del cliente y priorizar los ajustes de la siguiente revisión.
 
 **Criterio para cerrar la fase:** la versión revisada carga desde el enlace público, sus acciones principales funcionan y quedan identificados los pendientes del cliente.

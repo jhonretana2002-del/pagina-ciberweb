@@ -13,6 +13,7 @@ Registro de comprobaciones de la adaptación visual y de la publicación en GitH
 - Botones de WhatsApp y correo: aviso temporal visible, sin envío ni destino externo.
 - Créditos visuales: siete fuentes disponibles desde el pie de página.
 - Video local en MP4: reproducción sin sonido, pausa y reanudación comprobadas. La escena de portada se pausa al quedar fuera de pantalla.
+- Montaje de portada revisado en navegador: 16.9 segundos, 1280 píxeles de ancho, reproducción sin sonido y archivo cargado correctamente.
 - Código preparado para movimiento reducido y ahorro de datos: no inicia la reproducción automática cuando esas preferencias están activas. Revisión de implementación; no se realizó una prueba del cambio de preferencia a nivel del sistema operativo.
 - Sin mensajes de error o advertencia en la consola durante el recorrido revisado.
 - Recursos locales, anclas de navegación, identificadores y enlaces internos de la documentación comprobados.
@@ -27,4 +28,8 @@ Los conceptos presentan posibilidades; no incorporan agendas de citas, cobros, i
 
 ## Publicación
 
-La publicación de esta versión se verifica en GitHub Pages antes de cerrar la entrega.
+La primera adaptación se publicó correctamente mediante GitHub Pages. Se confirmó que el enlace público devuelve la página de Ciberweb y que el documento por fases está disponible en el repositorio.
+
+Vista previa: https://jhonretana2002-del.github.io/pagina-ciberweb/
+
+Documento: https://github.com/jhonretana2002-del/pagina-ciberweb/blob/main/docs/PLAN_CIBERWEB.md
