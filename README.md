@@ -1,7 +1,5 @@
-# OdontoSalud · Dra. Alejandra Moya
+# Página Ciberweb
 
-Vista de avances del sitio dental.
+Copia independiente del sitio [OdontoSalud de la Dra. Alejandra Moya](https://github.com/jhonretana2002-del/odontosalud-web), creada como punto de partida para la página Ciberweb.
 
-Sitio: <https://jhonretana2002-del.github.io/odontosalud-web/>
-
-Este repositorio contiene únicamente los archivos estáticos de publicación. La ilustración dental es conceptual; los datos y el contenido están en revisión antes del lanzamiento definitivo. Los cambios de la rama `main` se publican mediante GitHub Pages.
+El contenido y los datos de contacto del sitio original siguen presentes en esta copia hasta que se adapten para Ciberweb.
