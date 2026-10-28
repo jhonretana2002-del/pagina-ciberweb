@@ -2,6 +2,15 @@
 
 Registro de comprobaciones de la adaptación visual y de la publicación en GitHub Pages.
 
+## Reemplazo de escenas por adultos — 27 de octubre de 2026
+
+- Deportes: nueva jugada de fútbol entre adultos; clínicas: doctor adulto conversando con una paciente adulta, con estetoscopio y equipo de presión arterial en la consulta.
+- Imágenes de respaldo extraídas de los nuevos videos. El montaje de portada también se actualizó para retirar el fragmento deportivo anterior.
+- Decodificación completa sin errores de los dos MP4 y del montaje de apertura. Formato H.264, sin audio y preparado para inicio rápido en navegador.
+- Revisión visual de ambas escenas en navegador de escritorio. La reproducción automática, la pausa del video médico y el cambio de escena se comprobaron en la vista previa local.
+- Fuentes y créditos actualizados: fútbol de Mixkit con licencia Free y consulta médica de Pexels.
+- Las rutas actualizadas incluyen una versión para evitar que el navegador reutilice los videos e imágenes anteriores desde su caché.
+
 ## Ampliación audiovisual por sector
 
 - Las siete escenas de sectores cuentan con un video local y una imagen fija de respaldo; la portada conserva su propio video. Se comprobaron las ocho rutas de video, las ocho imágenes de respaldo y sus ocho controles.
