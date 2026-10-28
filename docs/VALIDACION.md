@@ -39,9 +39,18 @@ Registro de comprobaciones de la adaptación visual y de la publicación en GitH
 - El chat identifica sus respuestas como automáticas. No utiliza servicios externos de conversación, no envía consultas al equipo y no guarda mensajes al recargar.
 - Los canales de contacto siguen pendientes de los enlaces del cliente; el chatbot lo indica sin inventar destinos, precios ni plazos.
 
+## Botones de redes sociales
+
+- Tres accesos circulares de WhatsApp, Instagram y Facebook adaptados desde OdontoSalud, con el estilo de Ciberweb.
+- Cada botón abre un aviso del canal correspondiente mientras se reciben los enlaces reales.
+- El aviso de los botones originales de contacto vuelve a su texto general después de consultar una red social.
+- Revisados en escritorio y móvil; en móvil se colocan por encima del acceso al chatbot, sin superponerse.
+- Se ocultan al abrir el chatbot y reaparecen al cerrarlo. Sin errores en la consola durante la revisión.
+- No se utilizan perfiles, números ni enlaces de OdontoSalud.
+
 ## Pendientes de contenido
 
-El cliente debe facilitar los enlaces de WhatsApp y correo. La identidad visual y los mensajes de esta primera propuesta quedan disponibles para su revisión.
+El cliente debe facilitar los enlaces de WhatsApp, correo, Instagram y Facebook. La identidad visual y los mensajes de esta primera propuesta quedan disponibles para su revisión.
 
 Los conceptos presentan posibilidades; no incorporan agendas de citas, cobros, inscripciones ni una tienda en funcionamiento.
 

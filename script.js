@@ -69,7 +69,16 @@ document.querySelectorAll('.concept-open').forEach(button => button.addEventList
   conceptDialog.showModal();
 }));
 document.querySelector('#concept-contact').addEventListener('click',() => conceptDialog.close());
-document.querySelectorAll('.contact-pending').forEach(button => button.addEventListener('click',() => document.querySelector('#contact-dialog').showModal()));
+document.querySelectorAll('.contact-pending').forEach(button => button.addEventListener('click',() => {
+  const channel = button.dataset.channel;
+  const description = !channel
+    ? 'Estamos preparando nuestros canales de WhatsApp y correo. En esta vista previa puedes explorar los conceptos e imaginar lo que crearíamos para tu marca.'
+    : channel === 'WhatsApp'
+      ? 'Estamos preparando el enlace de WhatsApp de Ciberweb. Lo encontrarás aquí cuando esté disponible.'
+      : 'Estamos preparando el perfil de Ciberweb en ' + channel + '. El enlace aparecerá aquí cuando esté disponible.';
+  document.querySelector('#pending-description').textContent = description;
+  document.querySelector('#contact-dialog').showModal();
+}));
 document.querySelector('#credits-open').addEventListener('click',() => document.querySelector('#credits-dialog').showModal());
 document.querySelectorAll('dialog').forEach(dialog => {
   dialog.querySelectorAll('.dialog-close,.dialog-close-text').forEach(button => button.addEventListener('click',() => dialog.close()));

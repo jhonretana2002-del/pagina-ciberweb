@@ -51,6 +51,7 @@ Estas escenas son conceptos de lo que se puede crear. No se presentan como traba
 - [x] Explicar los servicios y el proceso de trabajo de Ciberweb.
 - [x] Añadir un chatbot con opciones rápidas, consultas escritas y orientación sobre los siete sectores.
 - [x] Crear los botones de WhatsApp y correo, con aviso temporal y sin destinos inventados.
+- [x] Adaptar los botones flotantes de WhatsApp, Instagram y Facebook de OdontoSalud al estilo de Ciberweb, sin utilizar los enlaces de la clínica.
 - [x] Incorporar controles de reproducción y pausa, imagen de respaldo y carga diferida de video.
 - [x] Adaptar la composición y la navegación a pantallas pequeñas.
 - [ ] Conectar los enlaces reales de contacto cuando el cliente los comparta.
@@ -92,7 +93,7 @@ El movimiento acompaña el contenido. Usar cambios suaves en imágenes y botones
 
 ### Datos para completar con el cliente
 
-Los enlaces definitivos de WhatsApp y correo permanecen pendientes por indicación del cliente. También se puede ajustar la identidad con su logotipo, paleta y material propio. Incorporar proyectos reales o testimonios cuando estén disponibles y autorizados.
+Los enlaces definitivos de WhatsApp, correo, Instagram y Facebook permanecen pendientes del cliente. También se puede ajustar la identidad con su logotipo, paleta y material propio. Incorporar proyectos reales o testimonios cuando estén disponibles y autorizados.
 
 Las funciones específicas de cada futura página —como agenda de citas, admisiones, catálogo, tienda o inscripciones— se definirán por proyecto; los conceptos de esta presentación no implican que esas integraciones ya estén desarrolladas.
 

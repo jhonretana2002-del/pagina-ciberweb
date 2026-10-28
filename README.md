@@ -30,6 +30,8 @@ GitHub Pages publica desde la raíz de la rama main. Los cambios subidos a esa r
 
 Los botones de WhatsApp y correo están preparados y muestran un aviso temporal. Sus enlaces se añadirán cuando el cliente los facilite.
 
+Los accesos flotantes de WhatsApp, Instagram y Facebook reutilizan el formato de OdontoSalud con el estilo visual de Ciberweb. Muestran un aviso por canal hasta recibir los enlaces reales y se ocultan al abrir el chatbot para mantener el espacio de conversación libre.
+
 ## Chatbot de Ciberweb
 
 El botón flotante **¿Creamos tu web?** abre el asistente. Responde sobre servicios, los siete sectores, proceso, precios y cómo preparar un proyecto. El usuario puede escribir o elegir opciones, reiniciar la conversación y cerrarla con Escape.
