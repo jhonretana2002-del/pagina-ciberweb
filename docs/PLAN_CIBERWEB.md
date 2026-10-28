@@ -49,6 +49,7 @@ Estas escenas son conceptos de lo que se puede crear. No se presentan como traba
 - [x] Añadir conceptos diferenciados para joyerías, veterinarias, ropa y calzado.
 - [x] Crear una ventana de exploración con ideas de contenido para cada sector.
 - [x] Explicar los servicios y el proceso de trabajo de Ciberweb.
+- [x] Añadir un chatbot con opciones rápidas, consultas escritas y orientación sobre los siete sectores.
 - [x] Crear los botones de WhatsApp y correo, con aviso temporal y sin destinos inventados.
 - [x] Incorporar controles de reproducción y pausa, imagen de respaldo y carga diferida de video.
 - [x] Adaptar la composición y la navegación a pantallas pequeñas.
@@ -80,6 +81,7 @@ El movimiento acompaña el contenido. Usar cambios suaves en imágenes y botones
 - [x] Revisar la composición en escritorio y móvil y corregir recortes o desbordamientos horizontales.
 - [x] Verificar que carguen las seis fotografías, la imagen de respaldo y el video.
 - [x] Probar los siete conceptos, su cierre, la navegación y los botones de contacto.
+- [x] Probar las respuestas del chatbot, el reinicio, el cierre con teclado y su adaptación a móvil.
 - [x] Comprobar pausa y reanudación de video y cierre con teclado; revisar el tratamiento de movimiento reducido en el código.
 - [x] Confirmar que el sitio y sus metadatos ya no presenten la identidad de OdontoSalud.
 - [x] Subir el sitio, este documento y los créditos al repositorio de GitHub.

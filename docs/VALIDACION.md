@@ -20,6 +20,17 @@ Registro de comprobaciones de la adaptación visual y de la publicación en GitH
 - Sintaxis de JavaScript y revisión de diferencias de Git sin errores.
 - La página y sus metadatos ya no contienen la marca ni los contactos de OdontoSalud.
 
+## Chatbot de Ciberweb
+
+- Apertura y cierre desde el botón flotante, conservación de la conversación al cerrar y reinicio comprobados.
+- Las siete opciones de sector entregan una respuesta propia con tres propuestas y acceso a las secciones de la página.
+- Preguntas escritas sobre veterinarias, precios, contacto y consultas desconocidas comprobadas.
+- El contenido escrito se muestra como texto; una prueba con etiquetas HTML no creó elementos ni ejecutó contenido.
+- Cierre mediante Escape y devolución del foco al botón de apertura comprobados.
+- Adaptación del panel a móvil y a ventanas de poca altura. La preparación para teclado virtual usa el área visible del navegador; no se probó en un teléfono físico.
+- El chat identifica sus respuestas como automáticas. No utiliza servicios externos de conversación, no envía consultas al equipo y no guarda mensajes al recargar.
+- Los canales de contacto siguen pendientes de los enlaces del cliente; el chatbot lo indica sin inventar destinos, precios ni plazos.
+
 ## Pendientes de contenido
 
 El cliente debe facilitar los enlaces de WhatsApp y correo. La identidad visual y los mensajes de esta primera propuesta quedan disponibles para su revisión.

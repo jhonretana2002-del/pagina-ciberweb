@@ -21,6 +21,7 @@ La propuesta toma como referencia el formato visual de [WAM Digital](https://wam
 - index.html: estructura, mensajes, conceptos y ventanas de exploración.
 - styles.css: composición, estilos y adaptación a móvil.
 - script.js: navegación, conceptos y controles de video.
+- chatbot.js: asistente automático con respuestas preparadas, opciones rápidas y consultas escritas sobre Ciberweb.
 - assets/ciberweb: recursos audiovisuales optimizados.
 - [Recursos visuales y créditos](docs/RECURSOS_VISUALES.md).
 - [Validación](docs/VALIDACION.md).
@@ -28,3 +29,9 @@ La propuesta toma como referencia el formato visual de [WAM Digital](https://wam
 GitHub Pages publica desde la raíz de la rama main. Los cambios subidos a esa rama actualizan la vista previa.
 
 Los botones de WhatsApp y correo están preparados y muestran un aviso temporal. Sus enlaces se añadirán cuando el cliente los facilite.
+
+## Chatbot de Ciberweb
+
+El botón flotante **¿Creamos tu web?** abre el asistente. Responde sobre servicios, los siete sectores, proceso, precios y cómo preparar un proyecto. El usuario puede escribir o elegir opciones, reiniciar la conversación y cerrarla con Escape.
+
+El asistente funciona con respuestas locales preparadas. No utiliza una API de inteligencia artificial, no envía mensajes al equipo y no guarda la conversación al recargar. Los precios y plazos se explican según alcance, sin inventar tarifas.

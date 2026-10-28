@@ -12,8 +12,9 @@
   <meta property="og:image" content="https://jhonretana2002-del.github.io/pagina-ciberweb/assets/ciberweb/hero-poster.webp">
   <link rel="canonical" href="https://jhonretana2002-del.github.io/pagina-ciberweb/">
   <link rel="icon" href="assets/ciberweb/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=ciberweb-1">
+  <link rel="stylesheet" href="styles.css?v=ciberweb-chat-1">
   <script src="script.js?v=ciberweb-1" defer></script>
+  <script src="chatbot.js?v=1" defer></script>
   <title>Ciberweb — Tu historia merece sentirse</title>
 </head>
 <body>
@@ -90,5 +91,16 @@
     <li><a href="https://www.pexels.com/photo/women-shopping-for-fashionable-clothing-in-store-36730399/" target="_blank" rel="noopener noreferrer">Ropa — Vitaly Gariev</a></li>
     <li><a href="https://www.pexels.com/photo/white-shoes-in-close-up-photography-10497369/" target="_blank" rel="noopener noreferrer">Calzado — Cristiano De Luca</a></li>
   </ul></dialog>
+  <aside class="chat-widget" aria-label="Asistente de Ciberweb">
+    <section class="chat-panel" id="ciberweb-chat" role="dialog" aria-modal="false" aria-labelledby="chat-title" hidden>
+      <header class="chat-header"><span class="chat-avatar" aria-hidden="true">c<span>↗</span></span><div><h2 id="chat-title">Asistente Ciberweb</h2><p><span aria-hidden="true"></span> Imaginemos tu próxima web</p></div><div class="chat-header-actions"><button type="button" class="chat-reset" aria-label="Reiniciar conversación" title="Reiniciar conversación">↻</button><button type="button" class="chat-close" aria-label="Cerrar chatbot">×</button></div></header>
+      <p class="chat-intro">Orientación automática sobre nuestros servicios.</p>
+      <div class="chat-messages" id="chat-messages" role="log" aria-label="Conversación con el asistente de Ciberweb" aria-live="polite" aria-relevant="additions text" tabindex="0"></div>
+      <div class="chat-choices" id="chat-choices" aria-label="Opciones de conversación"></div>
+      <form class="chat-form" id="chat-form"><label class="visually-hidden" for="chat-input">Escribe tu consulta sobre Ciberweb</label><input type="text" id="chat-input" name="message" placeholder="¿Qué tienes en mente?" autocomplete="off" maxlength="400" enterkeyhint="send"><button type="submit" aria-label="Enviar mensaje"><span aria-hidden="true">↗</span></button></form>
+      <p class="chat-footnote">Tus mensajes se quedan en esta página.</p>
+    </section>
+    <button class="chat-launcher" type="button" aria-expanded="false" aria-controls="ciberweb-chat" aria-label="Abrir chatbot de Ciberweb"><span class="chat-launcher-label">¿Creamos tu web?</span><span class="chat-launcher-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M25 15a10 10 0 0 1-10 10H7l-4 4V15a10 10 0 0 1 20-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 3v8m-4-4h8M10 15h.1m5.9 0h.1" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></button>
+  </aside>
 </body>
 </html>
