@@ -39,6 +39,7 @@ dialog{border:0;border-radius:8px;max-width:620px;width:calc(100% - 36px);paddin
 .sector-index a{display:inline-flex;align-items:center;gap:10px;flex:none;border:1px solid #bdc5b7;border-radius:30px;padding:9px 12px;color:#354035;font-size:11px;white-space:nowrap;transition:background .2s,border-color .2s}
 .sector-index a:hover{background:#d8edbc;border-color:#a8bc88}
 .sector-index a span{font-size:15px}
+.hero-caption,.sector-story .story-footer{padding-right:190px}
 .sector-story{--story-accent:var(--lime);position:relative;display:flex;align-items:center;height:94svh;min-height:720px;max-height:960px;overflow:hidden;background:#26352b;color:#fff;border-top:2px solid #e9ece3}
 .sector-story .ambient-video{object-position:center;filter:saturate(.86)}
 .sector-story .story-shade{pointer-events:none;background:linear-gradient(90deg,rgba(7,16,12,.86) 0%,rgba(7,16,12,.63) 36%,rgba(7,16,12,.17) 78%,rgba(7,16,12,.08) 100%),linear-gradient(0deg,rgba(7,16,12,.66),transparent 40%,rgba(7,16,12,.17))}
@@ -57,6 +58,8 @@ dialog{border:0;border-radius:8px;max-width:620px;width:calc(100% - 36px);paddin
 .sector-veterinarias .ambient-video{object-position:56% center}
 .experiences>.concept-note{padding-block:31px 58px;margin-top:0;max-width:none}
 @media(max-width:800px){
+  .hero-caption,.sector-story .story-footer{padding-right:0}
+  .hero-caption .video-toggle,.sector-story .video-toggle{transform:translateY(-74px)}
   .sector-index{display:block;padding-block:20px 24px}
   .sector-index>span{display:block;margin-bottom:13px}
   .sector-index>div{margin-right:-22px;padding-right:22px}
