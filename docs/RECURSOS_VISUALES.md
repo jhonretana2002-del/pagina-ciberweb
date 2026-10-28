@@ -18,8 +18,8 @@ Las fotografías de los seis sectores aparecen en el montaje de apertura. Cada s
 
 | Sector | Archivos | Fuente |
 | --- | --- | --- |
-| Clínicas | clinics.mp4, clinics-poster.jpg | [Médica en su consultorio](https://mixkit.co/free-stock-video/female-doctor-in-white-coat-in-her-office-talking-4863/) |
-| Centros educativos | education.mp4, education-poster.jpg | [Docente frente a la pizarra](https://mixkit.co/free-stock-video/young-teacher-teaching-complicated-equations-4623/) |
+| Clínicas | clinics-checkup.mp4, clinics-checkup-poster.jpg | [Doctora que examina a un paciente con estetoscopio](https://mixkit.co/free-stock-video/female-doctor-listening-to-a-baby-with-a-stethoscope-4753/) |
+| Centros educativos | education-students.mp4, education-students-poster.jpg | [Estudiantes entrando al campus](https://mixkit.co/free-stock-video/students-walking-in-a-university-4519/) |
 | Joyerías | jewelry.mp4, jewelry-poster.jpg | [Anillos de compromiso](https://mixkit.co/free-stock-video/engagement-jewelry-5218/) |
 | Veterinarias | veterinary.mp4, veterinary-poster.jpg | [Perro recibiendo caricias](https://mixkit.co/free-stock-video/dachshund-dog-while-hands-caress-it-10361/) |
 | Ropa | fashion.mp4, fashion-poster.jpg | [Modelo en sesión fotográfica](https://mixkit.co/free-stock-video/model-in-a-photo-shoot-creative-studio-50640/) |
